@@ -3,19 +3,21 @@ import Messages from "./messages.jsx";
 import MessageInput from "./messageinput.jsx";
 import { TiMessages } from "react-icons/ti";
 import "../../index.css";
-
+import useConversation from "../../zustand/useConversation.js";
 const messageContainer = () => {
-  const notselected = true;
+  const { selectedConversation, setSelectedConversation } = useConversation();
   return (
     <div className="md:min-w-[450px] flex flex-col">
-      {notselected ? (
+      {!selectedConversation ? (
         noItemSelected()
       ) : (
         <>
           {/* header */}
           <div className="bg-slate-500 px-4 py-2 mb-2">
             <span className="label-text">To:</span>{" "}
-            <span className="text-gray-900 font-bold">John Doe</span>
+            <span className="text-gray-900 font-bold">
+              {selectedConversation.username}
+            </span>
           </div>
 
           <Messages />
