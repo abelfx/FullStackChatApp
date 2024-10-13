@@ -1,4 +1,4 @@
-import userConversation from "../zustand/useConversation";
+import userConversation from "../zustand/userConversation";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
 import { useAuthContext } from "../context/authContext";

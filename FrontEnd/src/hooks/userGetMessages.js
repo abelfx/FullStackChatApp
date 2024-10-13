@@ -1,6 +1,6 @@
 import toast from "react-hot-toast";
 import { useState, useEffect } from "react";
-import userConversation from "../zustand/useConversation";
+import userConversation from "../zustand/userConversation";
 import { getMessage } from "../../../BackEnd/controller/messagesController";
 
 const userGetMessages = () => {

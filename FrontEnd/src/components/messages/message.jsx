@@ -1,5 +1,5 @@
 import React from "react";
-import userConversation from "../../zustand/useConversation";
+import userConversation from "../../zustand/userConversation.js";
 import { useAuthContext } from "../../context/authContext.jsx";
 import extractTime from "../../../../BackEnd/utils/extractTime.js";
 
