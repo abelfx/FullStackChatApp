@@ -7,10 +7,9 @@ import messages from "./routes/messageRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 
 import connectDB from "./DB/connectToDB.js";
-import { app, server } from "./socket/socket.js";
 
 dotenv.config();
-
+const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cookieparser());
@@ -20,7 +19,7 @@ app.use("/api/auth", authlogin);
 app.use("/api/messages", messages);
 app.use("/api/users", userRoutes);
 
-server.listen(PORT, (err) => {
+app.listen(PORT, (err) => {
   if (err) return console.log(err);
   connectDB();
   console.log(`listening on port ${PORT}`);
