@@ -1,4 +1,4 @@
-# **Full Stack Chat App**
+# **Full Feature Full Stack Chat App**
 
 Welcome to the **Full Stack Chat App** repository! This project is a real-time chat application built using the **MERN stack** (MongoDB, Express.js, React.js, Node.js). It allows users to send and receive messages instantly, with features like authentication, real-time messaging, and chat rooms.
 
